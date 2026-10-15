@@ -88,6 +88,7 @@ int main (void)
      switch(command)
      {
         case CMD_QUIT:
+            clear();
             quit();
             return 0;
         
