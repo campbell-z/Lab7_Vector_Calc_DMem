@@ -2,8 +2,8 @@
 * Filenmae: vectop.c
 * Author: Zach Campbell
 * Description: Upgraded Vector Calculator main program
-* Date: 10/1/426
-* Version: 1.0
+* Date: 10/14/26
+* Version: 2.1
 * Notes:
 *   - 
 * Compile:
@@ -145,6 +145,7 @@ int main (void)
             errno = 0;
             count = strtoull(count_text, &endptr, 10);
 
+            // Error checking for fill
             if (count_text[0] == '-' || 
                 errno == ERANGE || 
                 endptr == count_text || 

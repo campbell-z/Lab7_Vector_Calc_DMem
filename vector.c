@@ -3,7 +3,7 @@
 * Author: Zach Campbell
 * Description: Function definitions for updated vector calculator
 * Date: 10/14/26
-* Version: 1.0
+* Version: 2.1
 * Notes:
 *   -
 *   - gcc -Wall -Wextra -Wpedantic -Werror -o main vectop.c vector.c -lm
@@ -1056,6 +1056,7 @@ int load_vectors(const char *filename)
     return 0;
 }
 
+// save name.csv to save vectors to .csv file for later reference
 int save_vectors(const char *filename)
 {
     FILE *file;
@@ -1093,7 +1094,7 @@ int save_vectors(const char *filename)
     printf("Saved %zu vector(s).\n", vector_count);
     return 0;
 }
-
+// > fill # where # is the number of vectors you wish to be filled in
 int fill_vectors(size_t count)
 {
     static size_t next_index = 0;
